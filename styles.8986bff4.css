@@ -1,0 +1,359 @@
+html{
+    font-size: 16px;
+    /* font-size: 32px; */
+    /* font-size: 46px; */
+}
+
+body {
+    background-color: #F8F9FA;
+}
+
+/* =======================  Navbar ===================== */
+    .nav-selects > *{
+        margin: 5px;
+    }
+
+    .navbar {
+        padding: 0 80px;
+        background-image: -webkit-gradient(linear, left bottom, right top, from(#7200ca), to(#940aff));
+        background-image: -webkit-linear-gradient(bottom left, #7200ca, #940aff);
+        background-image: -o-linear-gradient(bottom left, #7200ca, #940aff);
+        background-image: linear-gradient(to top right, #7200ca, #940aff);
+        color: #F8F9FA;
+    }
+
+    .navbar-brand {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+    }
+
+    .visible-easy, .visible-hard{
+        display: none;
+    }
+
+    .easy, .hard {
+        display: block;
+    } 
+
+    select{
+        height: 2.375rem;
+        background-color: transparent;
+        color: #F8F9FA;
+        margin-right: 1.25rem;
+        width: 94px;
+        border: 1px solid #fff;
+        font-size: 16px;
+    }
+
+    .waveform-select {
+        margin-right: 1.25rem;
+    }
+/* =======================  Navbar ===================== */
+
+/* =======================  Play Button ===================== */
+
+    .play {
+        width: 10.8rem;
+        height: 6.25rem;
+        -webkit-box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.14);
+                box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.14);
+        border-radius: 10px;
+        font-size: 2rem;
+    }
+
+    .play:focus {
+        outline: none;
+    }
+
+    .play:hover {
+        cursor: pointer;
+    }
+
+    .play-gain {
+        background-color: #c397e52e;
+        border-radius: 20px;
+        margin: 140px 0 100px 0;
+    }
+
+/* =======================  Play Button ===================== */
+
+/* =======================  Gain Slider ===================== */
+
+    .gain-slider {
+        width: 100px !important;
+        position: relative;
+        left: 40px;
+        top: 0px;
+        -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 6.55px 0;
+    }
+    input[type=range]:focus {
+        outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 6.9px;
+        cursor: pointer;
+        -webkit-box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+                box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+        background: #d9a6df;
+        border-radius: 8.7px;
+        border: 0.2px solid #010101;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 11px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -6.75px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #e1b9e6;
+    }
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 6.9px;
+        cursor: pointer;
+        box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+        background: #d9a6df;
+        border-radius: 8.7px;
+        border: 0.2px solid #010101;
+    }
+    input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 11px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+    }
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 6.9px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+        background: #d193d8;
+        border: 0.2px solid #010101;
+        border-radius: 17.4px;
+        box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+    }
+    input[type=range]::-ms-fill-upper {
+        background: #d9a6df;
+        border: 0.2px solid #010101;
+        border-radius: 17.4px;
+        box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 0.1px #0d0d0d;
+    }
+    input[type=range]::-ms-thumb {
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        border: 1px solid #000000;
+        height: 20px;
+        width: 11px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+        height: 6.9px;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+        background: #d9a6df;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+        background: #e1b9e6;
+    }
+
+/* =======================  Gain Slider ===================== */
+
+    .guess{
+        margin: 0 10px 10px;
+    }
+
+    #guesses, #guesses2{
+        margin: 0 auto 80px;
+        max-width: 750px;
+        border: 1px solid #F8F9FA;
+    }
+
+
+/* =======================  Guesses ===================== */
+
+/* =======================  Score Box ===================== */
+
+    #chance {
+        padding-left: 30px;
+        font-weight: 200;
+    }
+
+    .chance-text {
+        border: 1px solid #000;
+        height: 80px;
+        line-height: 80px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: #9b3be5;
+        color: #F8F9FA;
+        text-align: left;
+        padding-left: 45px;
+    }
+
+    #correct-score, #wrong-score {
+        color: green;
+        font-weight: 500;
+        padding-left: 10px;;
+    }
+
+    #wrong-score {
+        color: red;
+    }
+
+    .fas {
+        padding-right: 5px;
+        font-size: 1.875rem;
+    }
+
+    .fa-check-circle {
+        color: green;
+    }
+
+    .fa-times-circle {
+        color: red;
+    }
+
+    .correct-text, .wrong-text  {
+        padding-left: 40px;
+        font-weight: 200;
+    }
+
+    .correct-wrong{
+        padding: 50px 20px 20px 20px;
+        margin-left: -80px;
+        margin-top: 60px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+
+    .score-box{
+        border: 1px solid #000;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 3px 1px 2px lightgrey;
+                box-shadow: 2px 3px 1px 2px lightgrey;
+        max-width: 500px;
+        margin: 0 auto;
+        color: #333A40;
+    }
+
+/* =======================  Score Box ===================== */
+
+/* =======================  Footer ===================== */
+
+    .fixed-bottom {
+        padding-top: 13px;
+        height: 60px;
+    }
+
+/* =======================  Footer ===================== */
+
+/* =======================  Media Queries ===================== */
+
+@media (max-width: 920px) {
+    .correct-wrong{
+        padding: 20px;
+        padding-top: 70px;
+    }
+
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 24px;
+    }
+
+    .navbar-brand {
+        margin: auto;
+    }
+
+    .fixed-bottom {
+        padding-top: 33px;
+    }
+
+    .nav-selects {
+        margin: auto;
+    }
+
+      .play-gain {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .correct-wrong {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        text-align: left;
+        margin-top: -35px;
+    }
+
+    .correct-text, .wrong-text  {
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+
+    .fas {
+        padding-right: 0px;
+        font-size: 22px;
+        margin-left: 7px;
+    }
+
+    #guesses, #guesses2{
+        max-width: 450px;
+        margin-bottom: -52px;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+        margin-left: -50px;
+    }
+
+    .nav-selects {
+        margin-left: -55px;
+    }
+
+    .fixed-bottom {
+     padding-top: 40px;
+     height: 80px;
+    }
+
+    #play-again {
+        margin-top: -20px;
+    }
+
+    .play-gain {
+        margin-top: 50px;
+        margin-bottom: -10px;
+    }
+
+    .score-box{
+        max-width: 360px;
+        margin-top: 120px;
+    }
+}
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ear Trainer</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles.8986bff4.css">
+
+    <script src="/styles.8986bff4.js"></script></head>
+
+    <body>
+        
+        <nav class="navbar navbar-expand-lg justify-content-between mb-5 shadow">
+
+            <h1 class="navbar-brand display-4" href="#">Intervallic Ear Trainer</h1>
+
+            <div class="nav-selects d-flex"> 
+
+                <select id="btn-group" class="waveform-select">
+                    <option value="sine" id="sine">Sine</option>
+                    <option value="triangle" id="triangle">Triangle</option>
+                    <option value="sawtooth" id="sawtooth">Sawtooth</option>
+                    <option value="square" id="square">Square</option>
+                </select>
+
+                <div>
+                    <select id="mode">
+                        <option value="easy">easy</option>
+                        <option value="hard">hard</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="starting-freq-selector">
+                        <option value="261.63" selected="selected">C4</option>
+                        <option value="293.66">D4</option>
+                        <option value="329.63">E4</option>
+                        <option value="349.23">F4</option>
+                        <option value="392.0">G4</option>
+                        <option value="440.0">A4</option>
+                        <option value="493.88">B4</option>
+                        <option value="523.25">C5</option>
+                    </select>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="container text-center">
+
+            <div class="play-gain">
+                <button id="play-btn" class="play mt-5 mb-5 btn-success">Play</button>
+                    <input id="gain-slider" class="gain-slider" type="range" min="0" max="1" step="0.001">
+            </div>
+
+            <div id="guesses" class="visible-easy mt-5">
+                <button id="btn1" data-freq="261.63" class="btn-lg btn-outline-info shadow-sm guess">C4</button>
+                <button id="btn2" data-freq="293.66" class="btn-lg btn-outline-info shadow-sm guess">D4</button>
+                <button id="btn3" data-freq="329.63" class="btn-lg btn-outline-info shadow-sm guess">E4</button>
+                <button id="btn4" data-freq="349.23" class="btn-lg btn-outline-info shadow-sm guess">F4</button>
+                <button id="btn5" data-freq="392.0" class="btn-lg  btn-outline-info shadow-sm guess">G4</button>
+                <button id="btn6" data-freq="440.0" class="btn-lg  btn-outline-info shadow-sm guess">A4</button>
+                <button id="btn7" data-freq="493.88" class="btn-lg btn-outline-info shadow-sm guess">B4</button>
+                <button id="btn8" data-freq="523.25" class="btn-lg btn-outline-info shadow-sm guess">C5</button>
+            </div>
+
+            <div id="guesses2" class="visible-hard mt-5">
+                <button id="btn1" data-freq="261.63" class="btn-lg  btn-outline-info  shadow-sm guess">C4</button>
+                <button id="btn1" data-freq="277.183" class="btn-lg btn-outline-info  shadow-sm guess">C#4</button>
+                <button id="btn2" data-freq="293.66" class="btn-lg  btn-outline-info  shadow-sm guess">D4</button>
+                <button id="btn2" data-freq="311.127" class="btn-lg btn-outline-info  shadow-sm guess">D#4</button>
+                <button id="btn3" data-freq="329.63" class="btn-lg  btn-outline-info  shadow-sm guess">E4</button>
+                <button id="btn4" data-freq="349.23" class="btn-lg  btn-outline-info  shadow-sm guess">F4</button>
+                <button id="btn4" data-freq="369.994" class="btn-lg btn-outline-info  shadow-sm guess">F#4</button>
+                <button id="btn5" data-freq="392.0" class="btn-lg   btn-outline-info  shadow-sm guess">G4</button>
+                <button id="btn5" data-freq="415.305" class="btn-lg btn-outline-info  shadow-sm guess">G#4</button>
+                <button id="btn6" data-freq="440.0" class="btn-lg   btn-outline-info  shadow-sm guess">A4</button>
+                <button id="btn6" data-freq="466.164" class="btn-lg btn-outline-info  shadow-sm guess">A#4</button>
+                <button id="btn7" data-freq="493.88" class="btn-lg  btn-outline-info  shadow-sm guess">B4</button>
+                <button id="btn8" data-freq="523.25" class="btn-lg  btn-outline-info  shadow-sm guess">C5</button>
+            </div>
+
+            <div>
+                <h1 id="answer-display" class="text-secondary display-5 mt-5"></h1>
+            </div>
+
+
+            <div id="score" class="score-box mb-5">
+                <h4 class="chance-text">Score: <span id="chance"></span></h4>
+                <div class="correct-wrong">
+                    <h4 class="correct-text">
+                        <i class="fas fa-check-circle"></i>
+                        Correct: <span id="correct-score"></span></h4>
+                    <h4 class="wrong-text">
+                        <i class="fas fa-times-circle"></i>
+                        Wrong: <span id="wrong-score"></span></h4>
+                </div>
+                <h2 id="result-message" class="display-5 text-success pb-5"></h2>
+            </div>
+
+            <div id="play-again"></div>
+
+            <nav class="navbar fixed-bottom">
+                <p class="mx-auto">&copy;2019 Gregg Fine</p>
+            </nav>
+
+        </div>
+
+
+        <script src="/Play.2d67a94b.js"></script>
+    </body>
+
+</html>
